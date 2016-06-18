@@ -31,6 +31,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         btn_1_NumberAddition = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         m_btnHelloWorld = new javax.swing.JButton();
+        m_btnHelloWorldMe = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programming 2 - Main Menu");
@@ -46,10 +47,17 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Select an Assignment to view.");
 
-        m_btnHelloWorld.setText("3 - SayHello");
+        m_btnHelloWorld.setText("3 - Say Hello");
         m_btnHelloWorld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 m_btnHelloWorldActionPerformed(evt);
+            }
+        });
+
+        m_btnHelloWorldMe.setText("3 - Hello World (Me)");
+        m_btnHelloWorldMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m_btnHelloWorldMeActionPerformed(evt);
             }
         });
 
@@ -60,11 +68,16 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(m_btnHelloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 162, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(m_btnHelloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(m_btnHelloWorldMe)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,7 +85,9 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(btn_1_NumberAddition)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_1_NumberAddition)
+                    .addComponent(m_btnHelloWorldMe))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(m_btnHelloWorld)
                 .addContainerGap(179, Short.MAX_VALUE))
@@ -92,6 +107,12 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     shw.setLocationRelativeTo(null);
     shw.setVisible(true);
     }//GEN-LAST:event_m_btnHelloWorldActionPerformed
+
+    private void m_btnHelloWorldMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_btnHelloWorldMeActionPerformed
+         Asgn_3_Hello_world_Me hwf = new Asgn_3_Hello_world_Me(); //Create Hello World form
+    hwf.setLocationRelativeTo(null);                              //Center the Hello World form on screen
+    hwf.setVisible(true);                                         //Display the Hello World form
+    }//GEN-LAST:event_m_btnHelloWorldMeActionPerformed
 
   /**
    * @param args the command line arguments
@@ -133,5 +154,6 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton btn_1_NumberAddition;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton m_btnHelloWorld;
+    private javax.swing.JButton m_btnHelloWorldMe;
     // End of variables declaration//GEN-END:variables
 }
