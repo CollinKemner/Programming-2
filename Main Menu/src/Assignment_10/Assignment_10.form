@@ -23,19 +23,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Mexico_City_Time_Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Tokyo_Time_Label" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="New_York_Time_Label" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="World_Label" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txt_NewYorkTime" alignment="0" pref="50" max="32767" attributes="0"/>
-                  <Component id="txt_TokyoTime" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_MexicoTime" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="btn_WorldTimes" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Mexico_City_Time_Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Tokyo_Time_Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="New_York_Time_Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="World_Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txt_NewYorkTime" alignment="0" pref="50" max="32767" attributes="0"/>
+                          <Component id="txt_TokyoTime" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_MexicoTime" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace pref="218" max="32767" attributes="0"/>
           </Group>
@@ -61,7 +66,9 @@
                   <Component id="Mexico_City_Time_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_MexicoTime" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="151" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btn_WorldTimes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="108" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,6 +99,14 @@
     <Component class="javax.swing.JTextField" name="txt_TokyoTime">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_MexicoTime">
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_WorldTimes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Get World Times"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_WorldTimesActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

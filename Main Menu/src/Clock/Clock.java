@@ -5,6 +5,11 @@
  * and open the template in the editor.
  */
 
+package Clock;
+import java.time.Instant;
+import java.time.ZoneID;
+
+
 /**
  *
  * @author Collin Kemner
@@ -48,13 +53,13 @@ public class Clock {
         return Minutes;
     }
     
-    /*private String setHoursString = new Integer(Hours).toString();
+    private String setHoursString = new Integer(Hours).toString();
     private String setMinutesString = new Integer(Minutes).toString();
-    private String TimeStatement = setHoursString + ":" + setMinutesString;
+    public String TimeStatement = setHoursString + ":" + setMinutesString;
     
     public String getTime()
     {
         return TimeStatement;
     }
-    */
+    
 }

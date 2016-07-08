@@ -1,5 +1,5 @@
 
-package Assignments;
+package Assignment_10;
 
 import java.time.Clock;
 import java.time.Instant;
@@ -9,7 +9,7 @@ import java.time.ZoneId;
  *
  * @author Tina
  */
-public class Assignment_9 extends javax.swing.JFrame {
+public class Assignment_10 extends javax.swing.JFrame {
 
     /**
      * Creates new form Assignment_9
@@ -30,7 +30,7 @@ public class Assignment_9 extends javax.swing.JFrame {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     };
-    public Assignment_9() {
+    public Assignment_10() {
         initComponents();
         
     }
@@ -51,6 +51,7 @@ public class Assignment_9 extends javax.swing.JFrame {
         txt_NewYorkTime = new javax.swing.JTextField();
         txt_TokyoTime = new javax.swing.JTextField();
         txt_MexicoTime = new javax.swing.JTextField();
+        btn_WorldTimes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,22 +63,32 @@ public class Assignment_9 extends javax.swing.JFrame {
 
         Mexico_City_Time_Label.setText("Mexico City Time:");
 
+        btn_WorldTimes.setText("Get World Times");
+        btn_WorldTimes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_WorldTimesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mexico_City_Time_Label)
-                    .addComponent(Tokyo_Time_Label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(New_York_Time_Label, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(World_Label, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_NewYorkTime, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(txt_TokyoTime)
-                    .addComponent(txt_MexicoTime))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_WorldTimes)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Mexico_City_Time_Label)
+                            .addComponent(Tokyo_Time_Label, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(New_York_Time_Label, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(World_Label, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_NewYorkTime, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(txt_TokyoTime)
+                            .addComponent(txt_MexicoTime))))
                 .addContainerGap(218, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,12 +108,21 @@ public class Assignment_9 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Mexico_City_Time_Label)
                     .addComponent(txt_MexicoTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btn_WorldTimes)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_WorldTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_WorldTimesActionPerformed
+        String NewYorkTime;
+        clock.getMinutes();
+    }//GEN-LAST:event_btn_WorldTimesActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -120,20 +140,20 @@ public class Assignment_9 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Assignment_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assignment_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Assignment_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assignment_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Assignment_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assignment_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Assignment_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assignment_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Assignment_9().setVisible(true);
+                new Assignment_10().setVisible(true);
             }
         });
     }
@@ -143,6 +163,7 @@ public class Assignment_9 extends javax.swing.JFrame {
     private javax.swing.JLabel New_York_Time_Label;
     private javax.swing.JLabel Tokyo_Time_Label;
     private javax.swing.JLabel World_Label;
+    private javax.swing.JButton btn_WorldTimes;
     private javax.swing.JTextField txt_MexicoTime;
     private javax.swing.JTextField txt_NewYorkTime;
     private javax.swing.JTextField txt_TokyoTime;
