@@ -5,6 +5,8 @@
  */
 package Assignments;
 
+import Assignment_11.Assignment_11_GUI;
+
 /**
  *
  * @author Dave
@@ -32,6 +34,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         m_btnHelloWorld = new javax.swing.JButton();
         m_btnHelloWorldMe = new javax.swing.JButton();
+        btn_Polymorphism = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Programming 2 - Main Menu");
@@ -61,6 +64,13 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_Polymorphism.setText("11 - Polymorphism");
+        btn_Polymorphism.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_PolymorphismActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,12 +81,14 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 162, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(m_btnHelloWorld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_1_NumberAddition, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(m_btnHelloWorldMe)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_Polymorphism)
+                            .addComponent(m_btnHelloWorldMe))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -90,7 +102,9 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
                     .addComponent(m_btnHelloWorldMe))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(m_btnHelloWorld)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(btn_Polymorphism)
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +127,12 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
     hwf.setLocationRelativeTo(null);                              //Center the Hello World form on screen
     hwf.setVisible(true);                                         //Display the Hello World form
     }//GEN-LAST:event_m_btnHelloWorldMeActionPerformed
+
+    private void btn_PolymorphismActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PolymorphismActionPerformed
+        Assignment_11_GUI hwf = new Assignment_11_GUI();
+        hwf.setLocationRelativeTo(null);
+        hwf.setVisible(true);
+    }//GEN-LAST:event_btn_PolymorphismActionPerformed
 
   /**
    * @param args the command line arguments
@@ -152,6 +172,7 @@ public class Asgn_0_MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_1_NumberAddition;
+    private javax.swing.JButton btn_Polymorphism;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton m_btnHelloWorld;
     private javax.swing.JButton m_btnHelloWorldMe;

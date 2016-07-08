@@ -5,6 +5,11 @@
  */
 package Assignment_11;
 
+import Classes.ShapeTypes.*;
+import java.awt.Graphics;
+import java.awt.Point;
+import static java.lang.Integer.parseInt;
+import com.sun.glass.ui.Size;
 /**
  *
  * @author Tina
@@ -14,6 +19,8 @@ public class Assignment_11_GUI extends javax.swing.JFrame {
     /**
      * Creates new form Assignment_11_GUI
      */
+    
+    Shape shape;
     public Assignment_11_GUI() {
         initComponents();
     }
@@ -27,22 +34,150 @@ public class Assignment_11_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        title_Label = new javax.swing.JLabel();
+        panel_ForDrawing = new javax.swing.JPanel();
+        shape_Label = new javax.swing.JLabel();
+        rect_RadioBtn = new javax.swing.JRadioButton();
+        elipse_RadioBtn = new javax.swing.JRadioButton();
+        line_RadioBtn = new javax.swing.JRadioButton();
+        size_Label = new javax.swing.JLabel();
+        height_txtfield = new javax.swing.JTextField();
+        width_txtfield = new javax.swing.JTextField();
+        height_Label = new javax.swing.JLabel();
+        width_Label = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        title_Label.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        title_Label.setText("Collin Kemner's Polymorphism/Shapes");
+
+        panel_ForDrawing.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panel_ForDrawing.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panel_ForDrawingMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_ForDrawingLayout = new javax.swing.GroupLayout(panel_ForDrawing);
+        panel_ForDrawing.setLayout(panel_ForDrawingLayout);
+        panel_ForDrawingLayout.setHorizontalGroup(
+            panel_ForDrawingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panel_ForDrawingLayout.setVerticalGroup(
+            panel_ForDrawingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        shape_Label.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        shape_Label.setText("Shapes:");
+
+        rect_RadioBtn.setText("Rectangle");
+
+        elipse_RadioBtn.setText("Elipse");
+
+        line_RadioBtn.setText("Line");
+
+        size_Label.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        size_Label.setText("Size");
+
+        height_Label.setText("Height");
+
+        width_Label.setText("Width");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(title_Label)
+                .addContainerGap(47, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(shape_Label)
+                    .addComponent(rect_RadioBtn)
+                    .addComponent(elipse_RadioBtn)
+                    .addComponent(size_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(line_RadioBtn)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(height_Label)
+                        .addGap(18, 18, 18)
+                        .addComponent(width_Label))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(height_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(width_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panel_ForDrawing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(title_Label)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panel_ForDrawing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(shape_Label)
+                        .addGap(18, 18, 18)
+                        .addComponent(rect_RadioBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(elipse_RadioBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(line_RadioBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(size_Label)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(height_Label)
+                            .addComponent(width_Label))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(height_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(width_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 62, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void panel_ForDrawingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_ForDrawingMouseClicked
+        Point upperLeftCorner = evt.getPoint();
+        Size size = new Size();
+        size.width = parseInt(width_txtfield.getText());
+        size.height = parseInt(height_txtfield.getText());
+        Graphics g = panel_ForDrawing.getGraphics();
+        
+        //Polymorphism!!!
+        if (elipse_RadioBtn.isSelected())
+        {
+            shape = new Elipse(size.width, size.height);
+        } 
+        else
+        if (rect_RadioBtn.isSelected())
+        {
+            shape = new Rectangle(size.width, size.height);
+        } 
+        else
+        if (line_RadioBtn.isSelected())
+        {
+            shape = new Line(size.width, size.height);
+        }
+      
+        if (shape != null)
+        {
+            shape.Draw(g, upperLeftCorner.x, upperLeftCorner.y);
+            
+        }
+        
+    }//GEN-LAST:event_panel_ForDrawingMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +214,16 @@ public class Assignment_11_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton elipse_RadioBtn;
+    private javax.swing.JLabel height_Label;
+    private javax.swing.JTextField height_txtfield;
+    private javax.swing.JRadioButton line_RadioBtn;
+    private javax.swing.JPanel panel_ForDrawing;
+    private javax.swing.JRadioButton rect_RadioBtn;
+    private javax.swing.JLabel shape_Label;
+    private javax.swing.JLabel size_Label;
+    private javax.swing.JLabel title_Label;
+    private javax.swing.JLabel width_Label;
+    private javax.swing.JTextField width_txtfield;
     // End of variables declaration//GEN-END:variables
 }
